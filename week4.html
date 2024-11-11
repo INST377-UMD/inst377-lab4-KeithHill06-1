@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Hill - Week 4</title>
+        <link rel="stylesheet" href="week4.css">             
+    </head>
+
+    <body>
+        <header>
+            <h1 id="mainHeading">Keith Hill - INST377 - Lab 4</h1>
+        </header>
+
+        <div id="alerter" class="sections">
+            <form onsubmit="alertMe()">
+                <label for="name">Name: </label>
+                <input type="text" id="name">
+                <input id="alert" type="submit" value="Alert Me!">
+            </form>
+        </div>
+
+        <div id="colorChanger" class="sections">
+           <button onclick="changeColor()">Change Color</button>
+        </div>
+
+        <div id="validation" class="sections">
+            <form name="validateText" onsubmit="validate()">
+                    <label for="validateText">Text Tester: </label>
+                    <input type="text" id="textTester">
+                    <input id="validateButton" type="submit" value="Validate Text">
+            </form>
+        </div>
+
+        <div id="adder" class="sections">
+                <button type="button" onclick="addText()">Add Text</button>
+        </div>
+
+        <script type="text/javascript">
+            function alertMe() {
+                alert("Welcome to the webpage " + document.getElementById('name').value + '!!!');
+            }
+        </script>
+
+        <script type="text/javascript">
+            function changeColor(){
+                if(document.body.style.backgroundColor == 'lightblue'){
+                    document.body.style.backgroundColor = 'green';
+                }else{
+                    document.body.style.backgroundColor = 'lightblue';
+                }
+            }
+        </script>
+        
+        <script type="text/javascript">
+            function validate(){
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if(document.getElementById('textTester').value ==""){
+                    alert("Text field blank.");
+                }else if(validation.test(document.getElementById('textTester').value)){
+                    alert("No special characters permitted.");
+                }else{
+                    alert("You're good homie.");
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
+            var textAdded = false
+            function addText(){
+                if(textAdded == false){
+                    document.getElementById('mainHeading').innerText += ": You have added text.";
+                    textAdded = true;
+                }
+                
+            }
+        </script>
+
+    </body>
+</html>
