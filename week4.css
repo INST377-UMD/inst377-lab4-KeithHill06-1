@@ -1,0 +1,29 @@
+body { 
+    background-color: rgba(255, 99, 71, 0.5);
+}
+
+.sections {
+    background-color: lightblue;
+    color: white;
+    float: left;
+    border: 2px solid white;
+    margin: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    width: 40%; 
+    text-align: center;
+}
+
+#colorChanger, #adder { 
+    padding: 5px;
+    width: 30%;
+}
+
+#colorChanger button, #adder form {
+    margin: 1px
+}
+
+
+#validation{
+    clear: both;
+}
